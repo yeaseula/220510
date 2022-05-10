@@ -1,0 +1,1630 @@
+<DOCTYPE html!>
+
+    <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>zyl</title>
+
+
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+                text-decoration: none;
+            }
+
+            ul,
+            li,
+            ol {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+
+            #wrap {
+                width: 100%;
+                height: auto;
+
+
+            }
+
+            /*헤더*/
+
+            header {
+                width: 100%;
+                height: 70px;
+
+                display: flex;
+                align-items: center;
+
+            }
+
+            /*로고*/
+            .logo {
+                width: 12%;
+                height: 70px;
+                background-color: black;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+
+            .logo>a>img {
+                width: 80%;
+                height: 35px;
+                
+            }
+
+
+
+
+            /*네비게이션*/
+            .nav {
+                width: 88%;
+                height: 70px;
+                background-color: rgb(10, 10, 65);
+                
+                
+            }
+
+            .nav>ul {
+                display: flex;
+
+            }
+
+            .nav>ul>li {
+                display: inline-block;
+                text-align: center;
+                width: 22%; height: 70px;
+                line-height: 70px;
+                border-left-style: solid;
+                border-left-color: rgb(245, 241, 241, 0.2);
+                border-left-width: thin;
+                
+                
+            }
+
+            .nav>ul>li>a {
+  
+                color: #fff;
+                font-weight: 900;
+            }
+
+            .nav>ul>li>a:hover {
+                color: orangered;
+                transition: all 0.4s;
+            }
+
+
+            /*햄버거메뉴*/
+            .hamburger {
+                width: 3%;
+                height: 40px;
+                background-color: blueviolet;
+                display: none;
+            }
+
+            .ham {
+                width: 100%;
+                height: 100%;
+            }
+
+            /*슬라이더*/
+            .slider {
+                width: 100%;
+                height: 800px;
+                background-image: url(img/slider.jpg);
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .slider>h1 {
+                color: white;
+                font-size: 88px;
+                letter-spacing: 8px;
+                font-weight: 900;
+            }
+
+            /*슬라이더 위에 버튼들*/
+
+            .slider>.button {
+                margin: 40px;
+            }
+
+            .btn_1 {
+                background-color: orangered;
+                color: #fff;
+                font-size: 15px;
+                font-weight: 600;
+                padding: 13px 22px;
+                margin: 0 20px;
+                transition: all 0.3s;
+            }
+
+            .btn_2 {
+                background-color: rgb(10, 10, 65);
+                color: #fff;
+                font-size: 15px;
+                font-weight: 600;
+                padding: 13px 22px;
+                transition: all 0.3s;
+            }
+
+
+            .btn_1:hover {
+                background-color: rgb(10, 10, 65);
+                cursor: pointer;
+            }
+
+            .btn_2:hover {
+                background-color: white;
+                color: rgb(10, 10, 65);
+                cursor: pointer;
+            }
+
+            /*슬라이드 밑에 질문 박스*/
+
+            #absolute {
+                width: 100%;
+                height: 800px;
+                background-color: pink;
+            }
+
+            .box1 {
+                width: 1200px;
+                height: 105px;
+                background-color: orangered;
+                margin: 0 auto;
+                position: relative;
+                bottom: 61px;
+                left: 0;
+
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+            }
+
+            .box1>h3 {
+                color: #fff;
+                display: inline-block;
+                width: 45%;
+                height: 50px;
+                text-align: center;
+                padding: 9px;
+                font-size: 21px;
+            }
+
+            .form {
+                display: flex;
+                width: 45%;
+                height: 50px;
+                align-items: center;
+            }
+
+            form {
+                width: 80%;
+                height: 50px;
+                background-color: antiquewhite;
+            }
+
+            .form>.submit {
+                width: 20%;
+                height: 50px;
+                background-color: rgb(10, 10, 65);
+                text-align: center;
+                padding: 10px;
+                font-size: 18px;
+                color: white;
+                font-weight: 600;
+                transition: all 0.3s;
+            }
+
+            .form>.submit:hover {
+                cursor: pointer;
+                background-color: white;
+                color: rgb(10, 10, 65);
+            }
+
+
+            /*섹션1*/
+
+            .section1 {
+                width: 100%;
+                height: 960px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            /*섹션 1은 두 구역으로 나눔
+what we do + 아이콘 세개 박스랑
+사진 + 텍스트 박스 구간
+
+kind박스는 첫번째 구역 전체 감쌈
+*/
+            .kind {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                justify-content: center;
+            }
+
+
+
+            /*what we do 텍스트박스*/
+            .what {
+                width: 75%;
+                height: 125px;
+                margin: 98px 0 0 0px;
+                background-image: url(img/section1_back.png);
+                background-repeat: no-repeat;
+            }
+
+            .what>h1 {
+                font-size: 44px;
+                color: rgb(10, 10, 65);
+                margin: 38px 0px;
+            }
+
+            /*세 개짜리 박스 
+세 개 다 같은 이름으로 함*/
+
+
+            .what_box {
+                width: 24%;
+                height: 130px;
+                margin: 1%;
+
+                display: flex;
+            }
+
+            .what_box:hover {
+                cursor: pointer;
+                box-shadow: 4px 4px 7px #eee;
+            }
+
+            /*내용*/
+            .what_image_box {
+                width: 40%;
+                height: 120px;
+                text-align: center;
+                border-top: 3px solid orangered;
+            }
+
+
+            .what_image {
+                width: 62%;
+                height: 96px;
+                margin: 14px;
+            }
+
+            .what_box>.text {
+                width: 60%;
+                height: 130px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 20px;
+                border-top: 3px solid rgb(10, 10, 65);
+            }
+
+            .what_box>.text>h2 {
+                color: rgb(10, 10, 65);
+                margin: 8px 0px;
+                font-size: 22px;
+            }
+
+            .what_box>.text>p>a {
+                
+                font-weight: 800;
+                color: rgb(10, 10, 65);
+                transition: all 0.3s;
+            }
+
+            .what_box>.text>p>a:hover {
+                color: rgb(245, 93, 38);
+            }
+
+            /*화살표css*/
+            .what_box>.text>p>a:after {
+
+                content: '';
+                width: 5px;
+                /* 화살표사이즈 */
+                height: 5px;
+                /* 화살표 사이즈 */
+                border-top: 2px solid rgb(10, 10, 65);
+                /* 선 두께 */
+                border-right: 2px solid rgb(10, 10, 65);
+                /* 선 두께 */
+                display: inline-block;
+                transform: rotate(45deg);
+                /* 각도 */
+                position: absolute;
+                top: 84px;
+                left: 115px;
+
+            }
+
+            .what_box>.text>p>a:hover:after { border-top: 2px solid rgb(245, 93, 38);
+            border-right: 2px solid rgb(245, 93, 38); transition: all 0.3s;
+            }
+
+
+
+
+            /*섹션1의 두 번째 구역*/
+
+            .quality {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .quality>.fly {
+                width: 29%;
+                height: 70%;
+            }
+
+
+            .quality>.text4 {
+                width: 48%;
+                height: 70%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 60px;
+                background-color: #f4f3f9;
+            }
+
+            .quality>.text4>h1 {
+                color: rgb(10, 10, 65);
+            }
+
+            .quality>.text4>p {
+                color: rgb(10, 10, 65);
+                padding: 10px 0px 25px 0px;
+            }
+
+            .quality>.text4>.btn {
+                background-color: orangered;
+                color: white;
+                padding: 10 20px;
+                width: 140px;
+                text-align: center;
+                font-weight: 200;
+                transition: all 0.3s;
+            }
+
+            .quality>.text4>.btn:hover {
+                background-color: rgb(10, 10, 65);
+                cursor: pointer;
+            }
+
+            /*섹션2*/
+
+            .section2 {
+                width: 100%;
+                height: 770px;
+                background-color: rgb(10, 10, 65);
+
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-content: center;
+            }
+
+            /*case study*/
+            .case_study {
+                width: 76%;
+                height: 140px;
+                display: inline-block;
+                background-image: url(img/section2_back.jpg);
+                background-repeat: no-repeat;
+                margin: 20px 0px;
+            }
+
+
+            .case_study>h1 {
+                font-size: 44px;
+                margin: 38px 0px;
+                color: #fff;
+            }
+
+
+            /*case 박스들 3개짜리*/
+            .case_box {
+                width: 25%;
+                height: 410px;
+                margin: 0 12px;
+            }
+
+            .case {
+                width: 100%;
+                height: 250px;
+                overflow: hidden;
+            }
+
+            .case_img {
+                width: 100%;
+                height: 250px;
+            }
+
+            .case_img:hover {
+                transform: scale(1.2);
+                cursor: pointer;
+                transition: all 0.5s;
+                padding: 10px 0px;
+            }
+
+            
+
+            .case_box>.text>h4>a {
+                color: orangered;
+                display: inline-block;
+                margin: 10px 0px;
+                
+            }
+
+            .case_box>.text>p>a {
+                color: #fff;
+                display: inline-block;
+                font-size: 22px;
+                margin: 0 0 18px 0px;
+            }
+
+            .case_box>.text>.bt1 {
+                color: #fff;
+            }
+
+            .case_box>.text>h4>a:hover {opacity: 0.7; transition: all 0.4s;}
+            .case_box>.text>p>a:hover {opacity: 0.7; transition: all 0.4s;}
+
+            .case_box>.text>.bt1:hover {
+                cursor: pointer;
+                color: orangered;
+                opacity: 0.8;
+                transition: all 0.5s;
+            }
+
+
+
+            /*섹션3*/
+            .section3 {
+                width: 100%;
+                height: 477px;
+                background-image: url(img/section3.jpg);
+                background-position: center;
+                background-size: cover;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-content: center;
+            }
+
+
+            .section3>.icon {
+                width: 100px;
+                height: 100px;
+                margin: 2% 9%;
+                text-align: center;
+            }
+
+            .section3>.icon>a>.icon1 {
+                width: 90%;
+                height: 90%;
+            }
+
+            .section3>.icon>a>.icon1:hover {
+                opacity: 0.8;
+                transition: all 0.3s;
+            }
+
+            /*섹션4*/
+
+            .section4 {
+                width: 100%;
+                height: 1320px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+
+            }
+
+            /*why choose us?*/
+            .section4>.text {
+                width: 76%;
+                height: 130px;
+                display: inline-block;
+                background-image: url(img/section4_back.png);
+                background-repeat: no-repeat;
+
+            }
+
+            .section4>.text>h1 {
+                font-size: 44px;
+                margin: 38px 0px;
+                color: rgb(10, 10, 65);
+            }
+
+            /*이미지 여섯개짜리 박스 감싸줌*/
+            .section4>.img_box {
+                width: 100%;
+                height: 730px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-content: center;
+            }
+
+            /*이미지만 들어가는 박스
+1,3,5 번째 박스
+*/
+            .section4>.img_box>.se4 {
+                width: 23%;
+                height: 338px;
+                margin: 1% 2% 0 2%;
+                overflow: hidden;
+            }
+
+            .section4>.img_box>.se4>.image {
+                width: 100%;
+                height: 338px;
+            }
+
+            .section4>.img_box>.se4>.image:hover {
+                cursor: pointer;
+                transform: scale(1.2);
+                transition: all 0.4s;
+            }
+
+
+            /*텍스트만 들어가는 박스
+2,4,6 번째 박스
+*/
+
+            .img_box>.text_1 {
+                width: 23%;
+                height: 338px;
+                margin: 1% 2% 0 2%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                border-top: 3px solid rgb(10, 10, 65);
+                position: relative;
+            }
+
+            .img_box>.text_1:hover {
+                box-shadow: 3px 3px 3px #ddd;
+            }
+
+
+
+            .img_box>.text_1>.icon {
+                width: 100px;
+                height: 110px;
+            }
+
+            .img_box>.text_1>.textbox>h3 {
+                color: rgb(10, 10, 65);
+                font-size: 28px;
+            }
+
+            .img_box>.text_1>.textbox>p {
+                color: rgb(10, 10, 65);
+                margin: 13px 0px;
+            }
+
+            .img_box>.text_1>.textbox>.more {
+                font-weight: 700;
+                color: rgb(10, 10, 65);
+            }
+
+            .img_box>.text_1>.textbox>.more:hover {
+                cursor: pointer;
+                color: orangered;
+                transition: all 0.4s;
+            }
+
+
+            /*화살표*/
+
+            .img_box .more:after {
+
+                content: '';
+                width: 5px;
+                /* 화살표사이즈 */
+                height: 5px;
+                /* 화살표 사이즈 */
+                border-top: 2px solid rgb(10, 10, 65);
+                /* 선 두께 */
+                border-right: 2px solid rgb(10, 10, 65);
+                /* 선 두께 */
+                display: inline-block;
+                transform: rotate(45deg);
+                /* 각도 */
+                position: absolute;
+                top: 289.5px;
+                left: 275px;
+
+            }
+
+
+            .more:hover:after {border-top: 2px solid orangered;
+            border-right: 2px solid orangered; transition: all 0.4s;
+            }
+
+
+
+
+
+
+            /*숫자 들어가는 박스*/
+            .number {
+                width: 100%;
+                height: 220px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .number>.number_box {
+                width: 16%;
+                height: 160px;
+                margin: 0 50px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .number_box>h1 {
+                color: rgb(10, 10, 65);
+                font-size: 54px;
+            }
+
+            .number_box>h3 {
+                color: rgb(10, 10, 65);
+            }
+
+
+            /*섹션5*/
+            #section5 {
+                width: 100%;
+                height: 734px;
+                background-color: aqua;
+                background-image: url(img/section5.jpg);
+                background-position: left;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+
+            .container {
+                width: 43%;
+                height: 734px;
+                background-color: rgb(10, 10, 65);
+                float: right;
+                position: relative;
+            }
+
+            /*떠있는 박스*/
+
+            .global_text {
+                width: 650px;
+                height: 410px;
+                background-color: orangered;
+                position: absolute;
+                top: 160px;
+                left: -90px;
+                padding: 86px;
+            }
+
+            .global_text>h3 {
+                font-size: 38px;
+                color: #fff;
+            }
+
+            .global_text>p {
+                color: #fff;
+                margin: 17px 0 35px 0px;
+                width: 460px;
+            }
+
+            .global_text>.btn2 {
+                background-color: white;
+                color: navy;
+                padding: 14px 29px;
+                font-weight: 800;
+            }
+
+            .global_text>.btn2:hover {
+                background-color: rgb(10, 10, 65);
+                color: #fff;
+                transition: all 0.3s;
+                cursor: pointer;
+            }
+
+
+            /*섹션6*/
+            .section6 {
+                width: 100%;
+                height: 780px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            /*happy customers said*/
+            .happy {
+                width: 76%;
+                height: 132px;
+                display: inline-block;
+                margin: 110px 0 30px 0px;
+                background-image: url(img/section6_back.jpg);
+                background-repeat: no-repeat;
+            }
+
+            .happy>h1 {
+                font-size: 44px;
+                margin: 38px 0px;
+                color: rgb(10, 10, 65);
+            }
+
+            /*감싸는 박스*/
+            .customers_box {
+                width: 100%;
+                height: 360px;
+
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: baseline;
+
+            }
+
+            /*개별박스 2개짜리*/
+            .review {
+                width: 35%;
+                height: 270px;
+                margin: 2%;
+
+                border-style: solid;
+                border-left-width: thin;
+                border-right-width: thin;
+                border-bottom-width: thin;
+                border-left-color: #eee;
+                border-right-color: #eee;
+                border-bottom-color: #eee;
+                border-top-color: rgb(10, 10, 65);
+
+                padding: 37px 78px;
+            }
+
+            .review>p {
+                color: rgb(10, 10, 65);
+                margin: 22px 0px;
+            }
+
+
+            /*p 밑부분 감싸는 박스*/
+            .review>.c1 {
+                width: 65%;
+                height: 94px;
+
+                display: flex;
+                flex-flow: row wrap;
+            }
+
+            /*고객사진*/
+            .c1>.c1_1 {
+                width: 28%;
+                height: 87px;
+                border-radius: 70%;
+                overflow: hidden;
+            }
+
+            .c1>.c1_1>.a {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+            }
+
+            /*고객이름*/
+            .c1>.name {
+                width: 72%;
+                height: 94px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+            }
+
+            .c1>.name>h3 {
+                font-size: 20px;
+                color: rgb(10, 10, 65);
+                margin: 0 12px;
+            }
+
+            .c1>.name>p {
+                font-size: 15px;
+                color: rgb(10, 10, 65);
+                margin: 0 12px;
+            }
+
+
+            /*화살표 박스
+나중에 자바스크립트 효과줄것
+*/
+
+            .arrow_box {
+                width: 75%;
+                height: 54px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                position: relative;
+            }
+
+
+            .small_box,
+            .small_box2 {
+
+                position: relative;
+                float: left;
+                border: 1px solid #eee;
+                width: 54px;
+                height: 54px;
+                margin-right: 5px;
+                box-shadow: 3px 3px 5px #ddd;
+
+            }
+
+            /*hover*/
+            .small_box:hover {
+                background-color: orangered;
+                cursor: pointer;
+                transition: all 0.4s;
+            }
+
+            .small_box2:hover {
+                background-color: orangered;
+                cursor: pointer;
+                transition: all 0.4s;
+            }
+
+
+
+
+            .small_box:after {
+                position: absolute;
+                left: 19px;
+                top: 14px;
+                content: '';
+                width: 18px;
+                /* 사이즈 */
+                height: 18px;
+                /* 사이즈 */
+                border-top: 5px solid rgb(36, 36, 105);
+                /* 선 두께 */
+                border-right: 5px solid rgb(36, 36, 105);
+                /* 선 두께 */
+                transform: rotate(225deg);
+                /* 각도 */
+
+
+
+            }
+
+
+            .small_box2:after {
+
+                position: absolute;
+                left: 12px;
+                top: 14px;
+                content: '';
+                width: 18px;
+                /* 사이즈 */
+                height: 18px;
+                /* 사이즈 */
+                border-top: 5px solid rgb(36, 36, 105);
+                /* 선 두께 */
+                border-right: 5px solid rgb(36, 36, 105);
+                /* 선 두께 */
+                transform: rotate(45deg);
+                /* 각도 */
+
+
+            }
+
+            /*가상요소 hover*/
+            .small_box:hover:after {
+                border-top: 5px solid #fff;
+                border-right: 5px solid #fff;
+            }
+
+            .small_box2:hover:after {
+                border-top: 5px solid #fff;
+                border-right: 5px solid #fff;
+            }
+
+
+
+
+
+
+            /*섹션7*/
+
+            .section7 {
+                width: 100%;
+                height: 870px;
+                background-color: #f4f3f9;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /*MEET THE PROS*/
+
+            .meet {
+                width: 76%;
+                height: 132px;
+                display: inline-block;
+                margin: 110px 0 46px 0px;
+                background-image: url(img/section7_back.jpg);
+                background-repeat: no-repeat;
+            }
+
+            .meet>h1 {
+                font-size: 44px;
+                margin: 38px 0px;
+                color: rgb(10, 10, 65);
+            }
+
+            /*프로필 들어가는 전체박스*/
+
+
+            .person {
+                width: 100%;
+                height: 770px;
+                display: flex;
+                flex-direction: row wrap;
+                justify-content: center;
+            }
+
+            /*개별박스*/
+
+            .profile {
+                width: 16%;
+                height: 489px;
+                margin: 0 29px;
+            }
+
+            .profile:hover {
+                padding-bottom: 30px;
+                transform: translate(0, -30px);
+                transition: all 0.4s;
+
+            }
+
+            .profile>.profile_image {
+                width: 100%;
+                height: 380px;
+            }
+
+            .profile>.profile_image:hover {
+                -webkit-filter: grayscale(100%);
+                filter: gray;
+            }
+
+            .profile>h4 {
+                font-size: 24px;
+                color: rgb(10, 10, 65);
+                margin: 14px 0 7px 8px;
+            }
+
+            .profile>p {
+                font-size: 12px;
+                font-weight: 800;
+                color: rgb(36, 36, 105);
+                margin: 0 8px;
+
+            }
+
+            /*하단*/
+            /*첫번째 푸터*/
+            #footer1 {
+                width: 100%;
+                height: 76px;
+                background-color: orangered;
+            }
+
+
+            #footer1>ul {
+                font-size: 15px;
+                display: flex;
+                justify-content: center;
+            }
+
+            #footer1>ul>li {
+                margin: 24px;
+            }
+
+            #footer1>ul>li>a {
+                
+                color: #fff;
+            }
+
+            #footer1>ul>li>a:hover {
+                color: rgb(10, 10, 65);
+                transition: all 0.3s;
+            }
+
+            /*마지막 푸터*/
+
+            footer {
+                width: 100%;
+                height: 510px;
+                background-color: rgb(10, 10, 65);
+
+                display: flex;
+                flex-flow: row wrap;
+                align-content: space-between;
+                justify-content: center;
+
+            }
+
+            footer>ul {
+                display: inline-block;
+                margin: 40px;
+                width: 265px;
+                height: 300px;
+                text-align: left;
+                padding: 20px;
+            }
+
+
+
+            footer>ul>.a_li {
+                color: #fff;
+                font-weight: 900;
+                font-size: 18px;
+            }
+
+            footer>ul>li {
+                margin: 25px;
+                font-size: 13px;
+                color: #fff;
+            }
+
+            footer>ul>li>a {
+                
+                color: #fff;
+                opacity: 0.8;
+            }
+
+            footer>ul>li>a:hover {
+                opacity: 1;
+            }
+
+
+
+            footer>p {
+                width: 100%;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                border-top: 1px solid #eee;
+                color: #fff;
+                font-size: 12px;
+            }
+        </style>
+
+
+    </head>
+
+
+    <body>
+
+        <div id="wrap">
+
+            <header>
+
+
+                <div class="logo">
+                    <a href="#"><img src="img/logo.png" style="width: 70px;"></a>
+
+                </div>
+
+
+
+
+
+
+                <!--네비게이션-->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Get a Quote</a></li>
+                    </ul>
+
+
+                </nav>
+
+                <div class="hamburger">
+                    <img src="https://cdn-icons.flaticon.com/png/128/5259/premium/5259008.png?token=exp=1652067280~hmac=be9ef6a9feb70a6d99b9b33cde1caf8f"
+                        alt="ham" class="ham">
+                </div>
+
+
+
+            </header>
+
+            <!--앱솔루트 무시/ 슬라이더-->
+
+            <div id="absolute">
+
+                <div class="slider">
+                    <h1>WorldWide Logistics<br>with Global Network</h1>
+
+                    <div class="button">
+                        <span class="btn_1">Get a Quote</span>
+                        <span class="btn_2">Learn More</span>
+                    </div>
+
+                </div>
+
+                <!--검색창-->
+                <div class="box1">
+                    <h3>Subscribe to our newsletter to get the latest deals!</h3>
+                    <div class="form">
+                        <form>
+                            <input type="text" name="name" autofocus required placeholder="Your Email Adress"
+                                style="height:50px; width: 100%; font-size: 18px;">
+                        </form>
+
+                        <span class="submit">submit</span>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!--섹션1-->
+
+            <div class="section1">
+                <!--3개 나란히 박스 아이콘-->
+
+                <div class="kind">
+                    <!--what we do-->
+                    <div class="what">
+                        <h1>WHAT WE DO</h1>
+                    </div>
+
+                    <!--아이콘이랑 텍스트-->
+                    <div class="what_box">
+                        <div class="what_image_box">
+                            <img src="img/section1_icon1.jpg" alt="flight" class="what_image">
+                        </div>
+                        <div class="text">
+                            <h2>Air Freight</h2>
+
+                            <p><a href="#">Learn More</a></p>
+
+                        </div>
+                    </div>
+
+                    <div class="what_box">
+                        <div class="what_image_box">
+                            <img src="img/section1_icon2.jpg" alt="haousing" class="what_image">
+                        </div>
+                        <div class="text">
+                            <h2>Warehousing</h2>
+
+                            <p><a href="#">Learn More</a></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="what_box">
+                        <div class="what_image_box">
+                            <img src="img/section1_icon3.jpg" alt="ocean" class="what_image">
+                        </div>
+                        <div class="text">
+                            <h2>Ocean Freight</h2>
+
+                            <p><a href="#">Learn More</a></p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--사진이랑 텍스트랑 버튼-->
+                <div class="quality">
+                    <img src="img/section1_quality.jpg" alt="skfdkrksek" class="fly">
+                    <div class="text4">
+                        <h1>Quality Without Questions</h1>
+                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo<br>
+                            minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, <br>
+                            omnis dolor repellendus temporibus autem.</p>
+                        <span class="btn">Get a Quote</span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!--섹션2-->
+
+            <div class="section2">
+
+                <!--텍스트 박스-->
+                <div class="case_study">
+                    <h1>CASE STUDY</h1>
+                </div>
+                <!--첫번째 박스-->
+                <div class="case_box">
+                    <div class="case"><img src="img/section2_case1.jpg" alt="d" class="case_img"></div>
+                    <div class="text">
+                        <h4><a href="#">MANUFACTURING</a></h4>
+                        <p><a href="#">WordPress Website Audit by a<br>Website Maintenance Company</a></p>
+                        <span class="bt1">View Case Study</span>
+                    </div>
+                </div>
+                <!--두번째 박스-->
+                <div class="case_box">
+                    <div class="case"><img src="img/section2_case2.jpg" alt="d" class="case_img"></div>
+                    <div class="text">
+                        <h4><a href="#">WAREHOUSING</a></h4>
+                        <p><a href="#">A National Wholesale Distributor</a></p>
+                        <span class="bt1">View Case Study</span>
+                    </div>
+                </div>
+                <!--세번째 박스-->
+                <div class="case_box">
+                    <div class="case"><img src="img/section2_case3.jpg" alt="d" class="case_img"></div>
+                    <div class="text">
+                        <h4><a href="#">MANUFACTURING</a></h4>
+                        <p><a href="#">Customized Fleet Technology<br>Solutions</a></p>
+                        <span class="bt1">View Case Study</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+            <!--섹션3 아이콘들-->
+            <div class="section3">
+
+                <div class="icon"><a href="#"><img src="img/icon1.png" alt="icon1" class="icon1"></a></div>
+                <div class="icon"><a href="#"><img src="img/icon2.png" alt="icon1" class="icon1"></a></div>
+                <div class="icon"><a href="#"><img src="img/icon3.png" alt="icon1" class="icon1"></a></div>
+                <div class="icon"><a href="#"><img src="img/icon4.png" alt="icon1" class="icon1"></a></div>
+                <div class="icon"><a href="#"><img src="img/icon5.png" alt="icon1" class="icon1"></a></div>
+                <div class="icon"><a href="#"><img src="img/icon6.png" alt="icon1" class="icon1"></a></div>
+                <div class="icon"><a href="#"><img src="img/icon7.png" alt="icon1" class="icon1"></a></div>
+                <div class="icon"><a href="#"><img src="img/icon8.png" alt="icon1" class="icon1"></a></div>
+
+
+            </div>
+
+
+            <!--섹션4-->
+            <div class="section4">
+
+                <!--wht choose us-->
+                <div class="text">
+                    <h1>WHY CHOOSE US?</h1>
+
+                </div>
+
+                <!--박스 6개들어간 틀-->
+
+                <div class="img_box">
+
+                    <!--첫번째 이미지-->
+                    <div class="se4"><img src="img/section4_img.jpg" alt="1" class="image"></div>
+                    <!--두번째 텍스트-->
+                    <div class="text_1">
+                        <img src="img/section4_icon.jpg" alt="i" class="icon">
+                        <div class="textbox">
+                            <h3>cost saving</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur<br>adipisicing elit, sed do eiusmod tempor</p>
+                            <span class="more">Learn More</span>
+                        </div>
+
+
+                    </div>
+                    <!--세번째 이미지-->
+                    <div class="se4"><img src="img/section4_img2.jpg" alt="2" class="image"></div>
+                    <!--네번째 텍스트-->
+                    <div class="text_1">
+                        <img src="img/section4_icon2.jpg" alt="i" class="icon">
+                        <div class="textbox">
+                            <h3>Safe Packing</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur<br>adipisicing elit, sed do eiusmod tempor</p>
+                            <span class="more">Learn More</span>
+                        </div>
+
+                    </div>
+                    <!--다섯번째 이미지-->
+                    <div class="se4"><img src="img/section4_img3.jpg" alt="3" class="image"></div>
+                    <!--여섯번째 텍스트-->
+                    <div class="text_1">
+                        <img src="img/section4_icon3.jpg" alt="i" class="icon">
+                        <div class="textbox">
+                            <h3>Fastes Shipping</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur<br>adipisicing elit, sed do eiusmod tempor</p>
+                            <span class="more">Learn More</span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!--숫자박스-->
+
+                <div class="number">
+                    <div class="number_box">
+                        <h1>890</h1>
+                        <h3>Delivered<br>
+                            packages</h3>
+
+                    </div>
+
+                    <div class="number_box">
+                        <h1>890</h1>
+                        <h3>Countries<br>
+                            covered</h3>
+
+                    </div>
+
+                    <div class="number_box">
+                        <h1>890</h1>
+                        <h3>Tons<br>
+                            of Goods</h3>
+
+                    </div>
+
+                    <div class="number_box">
+                        <h1>890</h1>
+                        <h3>Satisfied<br>
+                            Clients</h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!--섹션5-->
+
+            <div id="section5">
+
+                <div class="container">
+
+                    <div class="global_text">
+                        <h3>Global Logistics Solutions</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut</p>
+                        <span class="btn2">Get a Quote</span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!--섹션6-->
+
+            <div class="section6">
+                <div class="happy">
+                    <h1>HAPPY CUSTOMERS SAID</h1>
+                </div>
+                <!--전체 박스-->
+                <div class="customers_box">
+                    <!--개별 박스-->
+                    <div class="review">
+                        <p>“I am only use ZYL logistics for my shipping needs. My clients have all come to expect
+                            excellent shipping & handling of their merchandise.”</p>
+                        <div class="c1">
+                            <div class="c1_1"><img src="img/c1_1.jpg" alt="c1_1" class="a"></div>
+                            <div class="name">
+                                <h3>Olivia Dench</h3>
+                                <p>CEO, GIGATRON</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review">
+                        <p>“I wanted to take a minute to thank you & your logistic team. I have grown comfortable
+                            leaning on ZYL Logistics team with some of my end of the day.”</p>
+                        <div class="c1">
+                            <div class="c1_1"><img src="img/c1_2.jpg" alt="c1_2" class="a"></div>
+                            <div class="name">
+                                <h3>Dame Judy</h3>
+                                <p>MANAGER, URBAN GARDEN</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--화살표 박스
+나중에 자바스크립트로 효과줄것
+-->
+                <div class="arrow_box">
+                    <span class="small_box"></span>
+                    <span class="small_box2"></span>
+                </div>
+
+            </div>
+
+
+
+            <!--섹션7-->
+
+
+
+            <div class="section7">
+                <div class="meet">
+                    <h1>MEET THE PROS</h1>
+                </div>
+
+                <div class="person">
+                    <div class="profile">
+                        <img src="img/section7_profile1.JPG" alr="person1" class="profile_image">
+                        <h4>Debor Fox</h4>
+                        <p>CEO, CO-FOUNDER</p>
+
+                    </div>
+
+                    <div class="profile">
+                        <img src="img/section7_profile2.JPG" alr="person1" class="profile_image">
+                        <h4>Patrick Hender</h4>
+                        <p>CEO, CO-FOUNDER</p>
+
+                    </div>
+
+                    <div class="profile">
+                        <img src="img/section7_profile3.JPG" alr="person1" class="profile_image">
+                        <h4>rachel collins</h4>
+                        <p>SUPERVISOR</p>
+
+                    </div>
+
+                    <div class="profile">
+                        <img src="img/section7_profile4.JPG" alr="person1" class="profile_image">
+                        <h4>Ronald James</h4>
+                        <p> WAREHOUSE LEAD</p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <!--하단-->
+
+
+            <!--주황색 푸터 1-->
+
+
+            <div id="footer1">
+
+                <ul>
+                    <li><a href="#">Freight Audit and Recovery</a></li>
+                    <li><a href="#">Business Intelligence & Analytics</a></li>
+                    <li><a href="#">Accounting Tools</a></li>
+                    <li><a href="#">Carrier Contract Optimization</a></li>
+                </ul>
+
+
+            </div>
+            <!--맨밑 푸터-->
+            <footer>
+                <ul>
+                    <li class="a_li">Services</li>
+                    <li><a href="#">Warehousing services
+                        </a></li>
+                    <li><a href="#">Distribution services</a></li>
+                    <li><a href="#">Value added services</a></li>
+                    <li><a href="#">Global coverage</a></li>
+                    <li><a href="#">Integrated Solutions</a></li>
+                </ul>
+
+                <ul>
+                    <li class="a_li">Company</li>
+                    <li><a href="#">Why choose Us?
+                        </a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Partners</a></li>
+                </ul>
+
+
+                <ul>
+                    <li class="a_li">Resources</li>
+                    <li><a href="#">Case Studies
+                        </a></li>
+                    <li><a href="#">Price Table</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Track Shipment</a></li>
+                </ul>
+
+
+                <ul>
+                    <li><a href="#"><img src="img/logo.png" alt="logo" style="width: 75px;"></a></li>
+                    <li>Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</li>
+
+                </ul>
+
+
+
+                <p>@Developed by TrueThemes</p>
+
+
+            </footer>
+
+
+
+        </div>
+
+
+    </body>
+
+    </html>
